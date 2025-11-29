@@ -1,0 +1,6 @@
+#!/bin/bash
+
+TargetRes=
+
+../fixtrap "fi.pgm" [,] [,] [,] [,] $TargetRes "fo.pgm"
+

@@ -1,0 +1,29 @@
+Fix Trapezoid
+
+Example
+
+Image 2560x1920 tilted approximately 30 degrees.
+Photo points:
+UL: (262, 238)
+UR: (2319, 367)
+LR: (2570*, 1662)
+LL: (0, 1622)
+* Clipped point.
+Width ~ 2313
+Height / cos(30) ~ 1546 (Height ~ 1339)
+Ratio is 1.5 == 3:2.
+Adjust to 2400x1600
+
+ULoffset = 262
+URoffset = -80 (= 2319 - 2399)
+LLoffset = 0
+LRoffset = 251 (= 2570 - 2399)
+
+x'	= ((262 + x)(2399 - x) + x(x - 80))(1599 - y)
+	+ (x(2399 - x) + x(x - 251))y
+	/ (2399 * 1599)
+
+y'	= (()(1599 - y) + y())(2399 - x)
+	+ (()(1599 - y) + y())x
+	/ (2399 * 1599)
+
